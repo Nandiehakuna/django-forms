@@ -1,0 +1,27 @@
+{% extends "user/index.html" %}
+{%load crispy_forms_tags%}
+{% block start %}
+
+<div>
+    <form action="" method="post">
+        {% csfr_token %}
+
+        <fieldset class="form-group">
+            {{form|crispy}}
+
+
+        </fieldset>
+
+        <button>
+            signup
+        </button>
+
+        <sub><a href="{% url 'login' %}"> already  have an account</a></sub>
+
+
+
+
+    </form>
+</div>
+{% endblock start %}
+
